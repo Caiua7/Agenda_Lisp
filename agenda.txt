@@ -1,0 +1,26 @@
+; INSERE UM ELEMENTO NO FINAL DE UMA LISTA
+
+(defun InsereFim (L X)
+  (cond
+    ((equal L nil)
+     (cons X nil))
+
+    ('t
+     (cons (car L)
+           (InsereFim (cdr L) X)))
+  )
+)
+
+; PROCURA UM CONTATO PELO NOME
+
+(defun BuscaContato (Agenda Nome)
+  (cond
+    ((equal Agenda nil) nil)
+
+    ((equal Nome (car (car Agenda)))
+     (car Agenda))
+
+    ('t
+     (BuscaContato (cdr Agenda) Nome))
+  )
+)
