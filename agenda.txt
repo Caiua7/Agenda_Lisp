@@ -24,3 +24,27 @@
      (BuscaContato (cdr Agenda) Nome))
   )
 )
+
+; RETORNA OS TELEFONES DE UM CONTATO
+
+(defun Telefones (Agenda Nome)
+  (cond
+    ((equal (BuscaContato Agenda Nome) nil)
+     'INEXISTENTE)
+
+    ('t
+     (cdr (BuscaContato Agenda Nome)))
+  )
+)
+
+; ADICIONA UM TELEFONE NO FINAL DA LISTA
+
+(defun AdicionaTelefone (Contato Telefone)
+
+  (cons
+   (car Contato)
+
+   (InsereFim
+    (cdr Contato)
+    Telefone))
+)
