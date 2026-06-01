@@ -11,6 +11,7 @@
   )
 )
 
+
 ; PROCURA UM CONTATO PELO NOME
 
 (defun BuscaContato (Agenda Nome)
@@ -37,6 +38,7 @@
   )
 )
 
+
 ; ADICIONA UM TELEFONE NO FINAL DA LISTA
 
 (defun AdicionaTelefone (Contato Telefone)
@@ -48,3 +50,119 @@
     (cdr Contato)
     Telefone))
 )
+
+
+; INCLUI CONTATO OU TELEFONE
+
+(defun Incluir (Agenda Dados)
+
+  (cond
+
+    ((equal Agenda nil)
+     (cons Dados nil))
+
+    ((equal (car Dados)
+            (car (car Agenda)))
+
+     (cons
+      (AdicionaTelefone
+       (car Agenda)
+       (car (cdr Dados)))
+
+      (cdr Agenda)))
+
+    ('t
+
+     (cons
+      (car Agenda)
+
+      (Incluir
+       (cdr Agenda)
+       Dados)))
+  )
+)
+
+
+; REMOVE TELEFONE DA LISTA DE TELEFONES
+
+(defun RemoveTelefone (Lista Tel)
+
+  (cond
+
+    ((equal Lista nil)
+     nil)
+
+    ((equal (car Lista) Tel)
+     (cdr Lista))
+
+    ('t
+
+     (cons
+      (car Lista)
+
+      (RemoveTelefone
+       (cdr Lista)
+       Tel)))
+  )
+)
+
+
+; ATUALIZA CONTATO APÓS REMOÇÃO
+
+(defun AtualizaContato
+       (RestoAgenda Nome Telefones)
+
+  (cond
+
+    ((equal Telefones nil)
+     RestoAgenda)
+
+    ('t
+
+     (cons
+
+      (cons Nome Telefones)
+
+      RestoAgenda))
+  )
+)
+
+
+; EXCLUI TELEFONE
+
+(defun Excluir (Agenda Dados)
+
+  (cond
+
+    ((equal Agenda nil)
+     nil)
+
+    ((equal (car Dados)
+            (car (car Agenda)))
+
+     (AtualizaContato
+
+      (cdr Agenda)
+
+      (car (car Agenda))
+
+      (RemoveTelefone
+
+       (cdr (car Agenda))
+
+       (car (cdr Dados)))))
+
+    ('t
+
+     (cons
+
+      (car Agenda)
+
+      (Excluir
+       (cdr Agenda)
+       Dados)))
+  )
+)
+
+
+
