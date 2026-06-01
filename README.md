@@ -29,3 +29,13 @@ Mateus fez as partes 7 e 8 (atualizar contato e excluir telefone).
 - Parte 6: Remover telefone da lista.
 - Parte 7: Atualizar contato.
 - Parte 8: Excluir telefone.
+
+## Dificuldades e Soluções
+
+Durante o desenvolvimento, as principais dificuldades estiveram relacionadas à manipulação de listas e ao uso de recursão em Lisp. A inclusão e exclusão de telefones exigiram atenção para atualizar corretamente os contatos sem perder informações já cadastradas. Na exclusão, também foi necessário tratar casos em que um contato ficava sem telefones associados.
+
+A solução adotada foi utilizar funções recursivas e funções auxiliares para percorrer e reconstruir as listas da agenda. Com testes sucessivos, identificamos um padrão de resolução baseado na análise do primeiro elemento da lista e na aplicação da recursão ao restante.
+
+## Conclusão
+
+Este trabalho contribuiu para o aprimoramento do raciocínio lógico e para a compreensão do paradigma funcional. A implementação da agenda permitiu praticar conceitos fundamentais de Lisp, como recursão e manipulação de listas utilizando operações básicas da linguagem.
