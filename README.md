@@ -2,11 +2,19 @@
 
 ## Diário de Bordo
 
+**Dia 30/05 - 14h**  
+Caiuã fez as partes 1 e 2 (inserir elemento e procurar um contato pelo nome).
 
-| 30/05 | 14h | Caiuã | Implementação das partes **1 e 2**: inserir elemento e procurar um contato pelo nome. |
-| 31/05 | 18h | Caiuã | Implementação das partes **3 e 4**: retornar os telefones do contato e adicionar um telefone ao final da lista. |
-| 31/05 | 19h | Mateus | Implementação das partes **5 e 6**: incluir contato ou telefone e remover telefone da lista. |
-| 01/06 | 17h | Mateus | Implementação das partes **7 e 8**: atualizar contato e excluir telefone. |
+**Dia 31/05 - 18h**  
+Caiuã fez as partes 3 e 4 (retornar os telefones do contato e adicionar um telefone no fim da lista).
+
+**Dia 31/05 - 19h**  
+Mateus fez as partes 5 e 6 (incluir contato ou telefone e remover telefone da lista).
+
+**Dia 01/06 - 17h**  
+Mateus fez as partes 7 e 8 (atualizar contato e excluir telefone).
+
+---
 
 ## Resumo das Entregas
 
